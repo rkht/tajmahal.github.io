@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Tag</title>
+      <script src="uk.js"></script>
+    </head>
+    <body>
+        <fieldset>
+            <legend>
+                <fieldset>
+                    Registration Form
+                </fieldset>
+            </legend>
+            <form action="rtg.html" onsubmit="return validate()" >
+                <table>
+                    <tr>
+                        <td>
+                            <label>Username</label>
+                        </td>
+                        <td><input onkeyup="usernamevalidate()" type="text" placeholder="Enter Username" id="username" name="username">
+                            <span id="udisplay" style="color:red">*</span>
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Email</label>
+                        </td>
+                        <td><input onkeyup="emailvalidate()"  type="email" placeholder="Enter Email" id="email" name="email">
+                             <span id="edisplay" style="color:red">*</span>
+                     </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Password</label>
+                        </td>
+                        <td><input onkeyup="passwordvalidate()" maxlength="8" type="password" placeholder="Enter Password" id="password" name="password">
+                        <span id="pdisplay" style="color: blue;">*</span>
+                            </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Contact</label>
+                        </td>
+                        <!--
+                        <td><input min=0 max=100 step="0.50" type="number"  placeholder="Enter Contact" id="contact" name="contact"></td>
+                        -->
+                        <td><input onkeyup="contactvalidate()"  type="text" maxlength="10" placeholder="Enter Contact" id="contact" name="contact">
+                        <span id="cdisplay" style="color: aqua;">*</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>DOB</label>
+                        </td>
+                        <td><input onchange="dobvalidate()"   type="date" id="dob" name="dob">
+                        <span id="ddisplay" style="color: darkgoldenrod;">*</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Gender</label>
+                        </td>
+                        <td><input onclick="gendervalidate()" type="radio" id="male" name="gender">
+                            <label onclick="gendervalidate()" for="male">Male</label>
+                            <input onclick="gendervalidate()" type="radio" id="female" name="gender">
+                            <label onclick="gendervalidate()" for="female">Female</label>
+                             <span id="gdisplay" style="color:red">*</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Hobby</label>
+                        </td>
+                        <td><input onclick="hobbyvalidate()" type="checkbox" id="cricket" name="cricket">
+                            <label onclick="hobbyvalidate()" for="cricket">Cricket</label>
+                            <input onclick="hobbyvalidate()" type="checkbox" id="hockey" name="hockey">
+                            <label onclick="hobbyvalidate()" for="hockey">Hockey</label>
+                            <span id="hdisplay" style="color: darkgreen;">#</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Select Subject</label>
+                        </td>
+                        <td>
+                            <select onchange="subjectvalidate()" id="subject" name="subject">
+                                <option value="">Select Subject</option>
+                                <option  value="C language">C language</option>
+                                <option value="C++ Language">C++ Language</option>
+                                <option value="Java">Java</option>
+                                <option value="MEAN">MEAN</option>
+                            </select>
+                            <span id="sdisplay" style="color:red">*</span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <label>Address</label>
+                        </td>
+                        <td><textarea onkeyup="addressvalidate()"  rows="4" cols="22" id="address" name="address" placeholder="Enter Address"></textarea>
+                        <span id="adisplay" style="color: darkred;">*</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><input onsubmit="registervalidate()" type="submit" value="Register" id="register">
+                            <span id="rdisplay" style="color: blue;">*</span>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </fieldset>
+    </body>
+</html>
+
+
+
+
+
